@@ -1,20 +1,26 @@
 import React from 'react';
 import logo from '../../assets/logo.jpg'
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import "./Header.css"
+import { CartWidget } from "./CartWidget"
 
-const NavBar = () => {
+const NavBar = ({children}) => {
+    const categorias = [
+    {id:0,nombre: 'Productos'},
+    {id:1,nombre: 'Servicios'},
+    {id:2,nombre: 'Inmuebles'},
+    {id:3,nombre: 'Vehiculos'}
+ ]
+
     return (
         <header>
         <img src={logo} alt=""/>
         <h1>PayPits</h1>
         <nav>
-            <a href="">Productos</a>
-            <a href="">Servicio</a>
-            <a href="">Inmuebles</a>
-            <a href="">Vehículo</a>
+        {categorias.map((categoria)=> {
+            return <a key={categoria.id} href="">{categoria.nombre}</a>
+          })}
         </nav>
-        <AddShoppingCartIcon color="action"/>
+        <CartWidget />
         </header>
     )
 }
