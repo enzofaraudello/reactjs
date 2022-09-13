@@ -1,14 +1,10 @@
 import React from 'react';
-import publicidad from '../../assets/publicidad.jpg'
 
-
-
-export const ItemListContainer= () => {
+export const ItemListContainer= ({greeting}) => {
     return (
         <>
-        <h>Publicidad</h>
         <div> 
-        <img src={publicidad} alt="" />
+        <h>{greeting}</h>
         </div>
         </>
     )
