@@ -1,29 +1,24 @@
+import { Text, Button, HStack} from '@chakra-ui/react'
 import React, {useState} from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({initial, stock, onAdd}) => {
 
     
-    const [contador, setContador]= useState(0);
+    const [count, setCount]= useState(initial);
+    
 
-    const ADD_TO_CART=() => {
-        setContador(contador + 1);
-    } 
-    const REMOVE_ONE=() => {
-        setContador(contador - 1);
-    } 
-    const REMOVE_ALL=() => {
-        setContador(0);
-    } 
+    const increase=() => count < stock && setCount(count + 1)
+    const decrease=() => count > initial && setCount(count - 1)
+
+
     return (
-    <>
-    <div>Carrito de Compras</div>
-    <h1>Productos</h1>
-    <h1>{contador}</h1>
-    <button onClick={ADD_TO_CART}>Agregar al carrito</button>
-    <button onClick={REMOVE_ONE}>Quitar una unidad</button>
-    <button onClick={REMOVE_ALL}>Borrar carrito</button>
+    <HStack> 
+        <Button onClick={decrease}>-</Button>
+        <Text>{count}</Text>
+        <Button onClick={increase}>+</Button>
+        <Button>Agregar al carrito</Button>
 
-    </>
+    </ HStack>
     )
 
 }
