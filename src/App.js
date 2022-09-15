@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "./Components/NavBar/NavbBar";
 import { ItemListContainer } from "./Components/NavBar/ItemListContainer";
 import ItemCount from "./Components/ItemCount";
+import "./App.css"
+
 
 const App = () => {
 
@@ -13,7 +15,7 @@ const App = () => {
     <>
     <NavBar />
     <ItemListContainer greeting={mensaje}/>
-    <ItemCount initial={1} stock={8} onAdd={() => {}} />
+    {/*<ItemCount initial={1} stock={8} onAdd={() => {}} />*/}
     </>
   )
 }

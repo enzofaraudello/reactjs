@@ -12,8 +12,10 @@ const NavBar = ({children}) => {
  ]
 
     return (
-        <header>
+        <>
         <img src={logo} alt=""/>
+        <header>
+        
         <h1>PayPits</h1>
         <nav>
         {categorias.map((categoria)=> {
@@ -22,6 +24,7 @@ const NavBar = ({children}) => {
         </nav>
         <CartWidget />
         </header>
+        </>
     )
 }
 
