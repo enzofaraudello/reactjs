@@ -6,11 +6,6 @@
   height: 40vmin;
   pointer-events: none;
 }
-.App-ItemListContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

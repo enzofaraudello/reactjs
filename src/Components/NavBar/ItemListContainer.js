@@ -3,14 +3,19 @@ import { products } from '../../assets/productos'
 import { customFetch } from '../../assets/customFetch'
 import { useState, useEffect } from 'react'
 import { ItemList } from '../ItemList'
+import { Spinner } from '@chakra-ui/react';
 
 
 const ItemListContainer= ({greeting}) => {
 
+    const[loading, setLoading]=useState([])
     const [listProducts, setlistProducts] = useState([])
     useEffect(() =>{
         customFetch(products)
-        .then(res => setlistProducts(res))
+        .then(res =>{
+             setLoading(false)
+             setlistProducts(res)})
+        
     }, [])
 
 
@@ -21,7 +26,10 @@ const ItemListContainer= ({greeting}) => {
         <div> 
         <h>{greeting}</h>
         </div>
-        <ItemList listProducts={listProducts} />
+        {loading ?
+        <Spinner />
+        :
+        <ItemList listProducts={listProducts} />}
         </>
     )
 }
