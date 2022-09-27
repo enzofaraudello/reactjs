@@ -1,29 +1,35 @@
-import React from "react";
-import NavBar from "./Components/NavBar/NavbBar";
-import { ItemListContainer } from "./Components/NavBar/ItemListContainer";
-import ItemCount from "./Components/ItemCount";
-import ItemDetailContainer from "./Components/ItemDetailContainer";
+import './App.css';
+import { ChakraProvider } from '@chakra-ui/react'
+import Header from './Components/Header/Header'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
+import Footer from './Components/Footer/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom' 
+import Cart from './Components/Cart/Cart'
 
-import "./App.css"
+function App() {
 
-
-const App = () => {
-
-  const mensaje = "Las mejores ofertas de la semana"
-  const onAdd = (count) => {
-    console.log ("Agregaste al carro")
-  }
   return (
-    <>
-    <NavBar />
-    <ItemListContainer greeting={mensaje}/>
-    <ItemDetailContainer />
-    {/*<ItemCount initial={1} stock={8} onAdd={() => {}} />*/}
-    </>
-  )
+    <BrowserRouter>
+      <ChakraProvider>
+        <Header />
+        <Routes>
+
+          <Route path="/" element={<ItemListContainer />}/>
+          
+          <Route path="/categoria/:IdCategoria" element={<ItemListContainer />}/>
+          
+          <Route path="/producto/:IdProducto" element={<ItemDetailContainer />}/>
+          
+          <Route path="/cart" element={<Cart />}/>
+          
+        </Routes>
+        <Footer />
+      </ChakraProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
-
+export default App;
 
 

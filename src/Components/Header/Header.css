@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+.header-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://i.pinimg.com/736x/c8/73/0f/c8730f0b83f92b539de4bd0be92140a5.jpg");
+}
+
+.header-envios {
+    background-color: #000000;
+    text-align: center;
+    font-size: 10x;
+}
+
+.titulo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: white
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+.producto-titulo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.producto-precio {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto-boton {
+    font-family: 'Quicksand', sans-serif;
+    width: 10rem;
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-container {
+    background-color: rgb(0, 84, 105);
+    width: 100vw;
+}
+
+.footer-anchors {
+    padding: 24px;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.redes-instagram, .redes-wp, .link-inicio, .link-playa, .link-boho, .link-sets, .link-mundo {
+    padding: 15px;
+}
