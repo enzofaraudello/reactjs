@@ -6,11 +6,13 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import Footer from './Components/Footer/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom' 
 import Cart from './Components/Cart/Cart'
+import CustomProvider from './Context/CartContext'
 
 function App() {
 
   return (
     <BrowserRouter>
+     <CustomProvider>
       <ChakraProvider>
         <Header />
         <Routes>
@@ -26,6 +28,7 @@ function App() {
         </Routes>
         <Footer />
       </ChakraProvider>
+     </CustomProvider> 
     </BrowserRouter>
   );
 }
